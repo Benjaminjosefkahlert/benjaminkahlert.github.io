@@ -77,7 +77,7 @@ function usage() {
 }
 
 function info() {
-    var response = "This website is modeled after a windows command prompt\nIt was created using HTML, CSS, and javascript\nBecause the interactive nature of the website may be a barrier for some\nI have included also created a standard website with some basic information.\nYou may either type 'standard' in the terminal\nor make the page smaller to access it.\n--------------------------------------\n";
+    var response = "This website is modeled after a windows command prompt.\nIt was created using HTML, CSS, and javascript.\nBecause the interactive nature of the website may be a barrier for some\nI have included also created a standard website with some basic information.\nYou may either type 'standard' in the terminal\nor make the page smaller to access it.\n--------------------------------------\n";
     var newLines = getNumberOfNewLines(response);
     var existingNewLines = getNumberOfNewLines(responseCaption);
     if (newLines + existingNewLines > 24) {
@@ -91,7 +91,7 @@ function info() {
 }
 
 function resume() {
-    var response = "Openining resume in new tab...\n-------------------------------------------\n";
+    var response = "Openining resume in new tab...\n--------------------------------------\n";
     var newLines = getNumberOfNewLines(response);
     var existingNewLines = getNumberOfNewLines(responseCaption);
     if (newLines + existingNewLines > 24) {
@@ -106,7 +106,7 @@ function resume() {
 }
 
 function standard() {
-    var response = "Openining standard web page in new tab...\n-------------------------------------------\n";
+    var response = "Openining standard web page in new tab...\n--------------------------------------\n";
     var newLines = getNumberOfNewLines(response);
     var existingNewLines = getNumberOfNewLines(responseCaption);
     if (newLines + existingNewLines > 24) {
@@ -219,7 +219,7 @@ document.addEventListener('keydown', function(event) {
 $(document).ready(function() {
     //Init
     setInterval('cursorAnimation()', 600);
-    responseCaption = "Type 'usage' for help...\n--------------------------------------\n";
+    responseCaption = "Type 'usage' for help...\nTo visit the standard version of the webpage, type 'standard'.\n--------------------------------------\n";
     var responseElement = document.getElementById('response').innerHTML = responseCaption;
 });
 
