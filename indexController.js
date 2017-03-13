@@ -188,6 +188,20 @@ function openInNewTab(url) {
     win.focus();
 }
 
+function openLinkedIn() {
+        var win = window.open("https://www.linkedin.com/in/benjamin-kahlert-0b4709126/", '_blank');
+        win.focus();
+}
+
+function openGitHub() {
+        var win = window.open("https://github.com/Benjaminjosefkahlert", '_blank');
+        win.focus();
+}
+
+function openResume() {
+        var win = window.open("ResumeNew.pdf", '_blank');
+        win.focus();
+}
 //Gets number of new lines in the responseCaption
 function getNumberOfNewLines(text) {
     var tempLines = 0;
@@ -230,3 +244,4 @@ function cursorAnimation() {
         opacity: 1
     }, 'fast', 'swing');
 }
+
