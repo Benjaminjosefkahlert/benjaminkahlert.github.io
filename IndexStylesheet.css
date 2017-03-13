@@ -1,248 +1,49 @@
-body {
-    background-image:url(LowPolyWhite.jpg);
-}
-
-.CMDIcon {
-    height:21px;
-    width:21px;
-    padding:8px;
-}
-
-/* Terminal Classes */
-.TerminalColor {
-    color:#FFFFFF;
-    font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
-    font-weight: bold;
-}
-
-.TerminalHeaderText {
-    font-size:12px;
-}
-
-.TopOfTerminal {
-    background-color: white;
-    height:37px;
-    font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
-}
-
-.Terminal {
-    background-color: black;
-    height:450px;
-    font-size:12px;
-    box-shadow: 10px 10px 5px #888888;
-}
-
-.TerminalContainer {
-    border: 1px solid;
-    margin-top:35px;
-    margin-bottom:35px;
-}
-
-.TerminalTypeface {
-    color: #ddd;
-    font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
-    font-size:14px;
-}
-
-.console {
-    font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
-}
-
-
-
-
-
-
-/* Resume Classes */
-
-.EducationContainer {
-    margin-top:35px;
-
-}
-
-.EducationHeading {
-    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-    margin-bottom:10px;
-    font-size:36px;
-    color: #4c4c4c;
-}
-
-.EducationDescription {
-    color: #489ADE;
-    font-weight:bold;
-    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-}
-
-.EducationName {
-    font-weight:bold;
-    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-    margin-top:10px;
-    margin-bottom:10px;
-}
-
-.EducationDescriptiveText {
-    color: #4c4c4c;
-    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-}
-
-.HeadingContainer {
-    padding-top:25px;
-    padding-bottom:25px;
-    background-repeat: no-repeat;
-    background-size:200% 230%;
-}
-
-/* Misc & Heading Classes */
-
-.NameHeading {
-    font-size: 90px;
-    font-weight: 100;
-    color: #FFFFFF;
-    background-image:url(LowPolyBlue.jpg);
-    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-}
-
-.NewContainer {
-    margin-top:60px;
-}
-
-.PortfolioDescription {
-    color:white;
-    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-    font-size:26px;
-    font-weight:bold;
-
-}
-
-.PortfolioPicture {
-    height:300px;
-    width:300px;
-    padding-bottom:20px;
-}
-
-.QuoteBar {
-    font-size: 26px;
-    font-weight: 100;
-    padding-top:10px;
-    padding-bottom:10px;
-    color: #FFFFFF;
-    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-}
-
-.ResumeHeader {
-    color:black;
-    font-weight:bold;
-    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-}
-
 .SectionHeader {
     font-weight:bold;
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
     font-size:80px;
     margin-top:35px;
+    text-align: center;
 }
-
-.SkillIcon {
-    border:1px solid #489ADE;
-    border-radius:6px;
-    color:#4C4C4C;
-    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-    font-size:12px;
-    padding: 8px 12px;
-    margin:10px 16px 10px 0px;
-}
-
-.WhyMeBox {
-    color:white;
-    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-    font-weight:bold;
-    font-size:20px;
-    padding:12px;
-    margin:12px;
-}
-
-
-.WhyMeDescription {
-    color:white;
-    font-size:16px;
-    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-    padding:20px;
-
-
-    opacity: .8;
-    transition: opacity .4s ease-out;
-    -moz-transition: opacity .4s ease-out;
-    -webkit-transition: opacity .4s ease-out;
-    -o-transition: opacity .4s ease-out;
-}
-
-.WhyMeDescription:hover {
-    opacity: 1;
-}
-
-.WhyMeHeader {
-    padding:20px;
-}
-
-.GmailIcon {
-    width:200px;
-    height:200px;
-}
-
 .infoIcon {
         transition: all .2s ease-in-out;
         padding:30px;
+        width:160px;
+        height:160px;
 }
-
 .infoIcon:hover {
-        transform: scale(1.1);
+        transform: scale(1.2);
+        cursor:pointer;
 }
-
+.ButtonContainer {
+        margin-top:35px;
+}
 @media screen and (max-width: 900px) {
-    .NameHeading {
-        font-size: 50px !important;
-    }
-    .HeadingContainer {
-        font-size: 50px !important;
-    }
-    .NameText {
-        font-size: 50px !important;
-    }
-    .AboutMeContainer {
-        padding-top:70px;
-        padding-bottom: 70px;
-    }
+        .SectionHeader {
+            font-weight:bold;
+            font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+            font-size:60px;
+            margin-top:35px;
+        }
+        .ButtonContainer {
+                margin-top:0px;
+        }
+        .infoIcon {
+            height:110px;
+            width:110px;
+            padding:25px;
+        }
 }
-
 @media screen and (max-width: 600px) {
-    .SectionHeader {
-        font-size:45px !important;
-    }
-    .GmailIcon {
-        height:130px;
-        width:130px;
-    }
-    .TerminalTypeface {
-        font-size: 16px;
-    }
-    .PortfolioDescription {
-        font-size: 20px;
-    }
-    .PortfolioPicture {
-        height: 150px;
-        width:150px;
-    }
-    .NameHeading {
-        font-size: 40px !important;
-    }
-    .HeadingContainer {
-        font-size: 40px !important;
-    }
-    .NameText {
-        font-size: 40px !important;
-    }
-    .AboutMeContainer {
-        padding-top: 35px;
-        padding-bottom: 35px;
-    }
+        .SectionHeader {
+            font-weight:bold;
+            font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+            font-size:30px;
+            margin-top:35px;
+        }
+        .infoIcon {
+            height:80px;
+            width:80px;
+            padding:15px;
+        }
 }
