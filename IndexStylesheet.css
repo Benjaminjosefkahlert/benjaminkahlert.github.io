@@ -21,9 +21,10 @@
 @media screen and (max-width: 900px) {
         .SectionHeader {
             font-size:60px;
+            margin-top:30px;
         }
         .ButtonContainer {
-                margin-top:0px;
+                margin-top:20px;
         }
         .infoIcon {
             height:110px;
@@ -35,10 +36,14 @@
         .SectionHeader {
             font-weight:500;
             font-size:40px;
+            margin-top:25px;
         }
         .infoIcon {
             height:80px;
             width:80px;
             padding:15px;
+        }
+        .ButtonContainer {
+            margin-top:10px;
         }
 }
