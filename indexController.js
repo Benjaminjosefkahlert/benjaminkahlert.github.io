@@ -3,7 +3,7 @@ function openLinkedIn() {
         win.focus();
 }
 function openGitHub() {
-        var win = window.open("https://github.com/Benjaminjosefkahlert", '_blank');
+        var win = window.open("https://github.com/benkahlert", '_blank');
         win.focus();
 }
 function openResume() {
