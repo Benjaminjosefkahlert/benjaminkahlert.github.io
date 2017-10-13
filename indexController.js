@@ -7,6 +7,6 @@ function openGitHub() {
         win.focus();
 }
 function openResume() {
-        var win = window.open("ResumeNew.pdf", '_blank');
+        var win = window.open("Resume.pdf", '_blank');
         win.focus();
 }
