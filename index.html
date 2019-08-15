@@ -1,47 +1,255 @@
 <html lang="en">
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- Angular Material style sheet -->
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
     <link rel="stylesheet" type="text/css" href="IndexStylesheet.css">
+
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script>
+        function blinker() {
+            $('.blinking').fadeOut(500);
+            $('.blinking').fadeIn(500);
+        }
+        setInterval(blinker, 1000);
+    </script>
 </head>
+
 <body ng-app="BlankApp" ng-cloak>
-    <div layout=column class="Mobile" flex>
-        <div style="background-image:url(LowPolyWhite.jpg)" layout="column" flex>
-            <div layout="column" flex>
-                <div style="background-image:url(nature.jpg); width:100%; height:100%;" class="WhyMeContainer" style="padding-bottom:35px;" layout="column">
-                    <div flex></div>
-                    <div layout="column" flex>
-                        <div layout="row">
+    <div style="background-image: linear-gradient(to bottom right, whitesmoke, white);"flex></div>
+        <div layout="column" flex>
+            <div layout="row">
+                <div flex></div>
+                <div class="section-header">Benjamin Josef Kahlert</div>
+                <div flex></div>
+            </div>
+        </div>
+        <!-- Terminal -->
+        <div layout="column" flex hide-xs hide-sm hide-md>
+            <div flex=10></div>
+            <div layout="row" flex>
+                <div flex=20 flex-xs=5 flex-sm=10></div>
+                <div class="terminal-container" layout="column" flex>
+                    <div class="top-of-terminal" layout="row" flex>
+                        <img class="CMD-icon" src="assets/CMD-ICON.png" />
+                        <div layout="column">
                             <div flex></div>
-                            <div style="color:#FFFFFF" class="SectionHeader">Benjamin Josef Kahlert</div>
+                            <div class="terminal-header-text">bkahlert@laptop:/c/Users/BensTerminal</div>
                             <div flex></div>
-                        </div>
-                        <div class="ButtonContainer" layout="row" flex>
-                            <div flex=20 flex-xs=5></div>
-                            <div layout-gt-sm="row" layout="column" flex>
-                                <div layout=row flex>
-                                    <div flex></div>
-                                    <img class="infoIcon" src="linkedin_circle_color-512.png" onclick="openLinkedIn()" />
-                                    <div flex></div>
-                                </div>
-                                <div layout=row flex>
-                                    <div flex></div>
-                                    <img class="infoIcon" src="resume-icon-png-4.png" onclick="openResume()" />
-                                    <div flex></div>
-                                </div>
-                                <div layout=row flex>
-                                    <div flex></div>
-                                    <img class="infoIcon" src="github-icon.png" onclick="openGitHub()" />
-                                    <div flex></div>
-                                </div>
-                            </div>
-                            <div flex=20 flex-xs=5></div>
                         </div>
                     </div>
-                    <div flex></div>
+                    <div class="terminal" flex>
+                        <div class="terminal-type-face" layout="column" flex>
+                            <div flex=95 style="padding:.5%;">
+                                <span id="response" style="white-space: pre-line"></span>
+                            </div>
+                            <div class="console">
+                                ~/<span id="caption"></span><span id="cursor" class="blinking">|</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <div flex=20 flex-xs=5 flex-sm=10></div>
+            </div>
+            <div flex=5></div>
+        </div>
+
+        <div layout="column" class="Mobile">
+            <div layout="column" flex>
+
+                <div layout="column" flex>
+                    <div class="info-container" layout="row" flex>
+                        <div layout="row" flex=25 flex-xs=15 flex-sm=20>
+                        </div>
+                        <div layout="column" flex>
+                            <div class="info-heading">Education</div>
+                            <div class="info-description">Purdue University, Bachelor of Science in Computer Science</div>
+                            <div class="info-name">West Lafayette, Indiana - August 2016-Current</div>
+                            <div layout="row">
+                                <div class="skill-icon">Java</div>
+                                <div class="skill-icon">C</div>
+                                <div class="skill-icon">Unix</div>
+                            </div>
+                            <div layout="row">
+                                <div class="skill-icon">Data Structures & Algorithms</div>
+                                <div class="skill-icon">Computer Architecture</div>
+                                <div class="skill-icon">Software Engineering & Testing</div>
+                            </div>
+                            <div layout="row">
+                                <div class="skill-icon">Operating Systems</div>
+                                <div class="skill-icon">Computer Security</div>
+                                <div class="skill-icon">Calc & Discrete math</div>
+                            </div>
+                        </div>
+                        <div layout="row" flex=25 flex-xs=15 flex-sm=20>
+                        </div>
+                    </div>
+
+                    <div class="info-container" layout="row" flex>
+                        <div flex=25 flex-xs=15 flex-sm=20></div>
+                        <div layout="column" flex>
+                            <div class="info-description">Adams Central High School, Academic Honors Diploma</div>
+                            <div class="info-name">Monroe, Indiana - August 2012-May 2016</div>
+                            <div layout="row">
+                                <div class="skill-icon">New Tech</div>
+                            </div>
+                        </div>
+                        <div layout="row" flex=25 flex-xs=15 flex-sm=20>
+                        </div>
+                    </div>
+
+                    <div class="info-container NewContainer" layout="row" flex>
+                        <div layout="row" flex=25 flex-xs=15 flex-sm=20>
+                        </div>
+                        <div layout="column" flex>
+                            <div class="info-heading">Work Experience</div>
+                            <div class="info-description">Midcontinent ISO, Software QA Intern</div>
+                            <div class="info-name">Carmel, Indiana - May 2019-August 2019</div>
+                            <div class="info-desc-text">
+                                At MISO I got the opprotunity to work on a broad spectrum of projects. I was able to work closely with engineering teams to develop the full stack of a very specific file comparison application.
+                                I also was able to gather requirements from the business side of the company for an upcoming feature. After gathering the requirements, my team practiced Behavior Driven Development by having me write the automated test cases with Cucumber before development began.
+                            </div>
+                            <div layout="row">
+                                <div class="skill-icon">C#</div>
+                                <div class="skill-icon">JavaScript</div>
+                            </div>
+                            <div layout="row">
+                                <div class="skill-icon">BDD</div>
+                                <div class="skill-icon">Cucumber</div>
+                                <div class="skill-icon">SpecFlow</div>
+                            </div>
+                        </div>
+                        <div flex=25 flex-xs=15 flex-sm=20></div>
+                    </div>
+
+                    <div class="info-container NewContainer" layout="row" flex>
+                        <div layout="row" flex=25 flex-xs=15 flex-sm=20>
+                        </div>
+                        <div layout="column" flex>
+                            <div class="info-description">Viral Launch, Software Development Intern</div>
+                            <div class="info-name">Indianapolis, Indiana - June 2018-August 2018</div>
+                            <div class="info-desc-text">
+                                I got to work with so many technologies that I had never touched before at this internship. From the very beggining I was tasked to create new features for the consumer facing website.
+                                I thought it was really cool that they trusted their intern so much. I was able to have production code pushed by the end of day 1. I used Vue and PHP for a lot of the front end development, and they also warmed up to me enough to let me work on the C# backend by the end of the internship!
+                            </div>
+                            <div layout="row">
+                                <div class="skill-icon">Vue</div>
+                                <div class="skill-icon">C#</div>
+                                <div class="skill-icon">PHP</div>
+                            </div>
+                            <div layout="row">
+                                <div class="skill-icon">Amazon</div>
+                                <div class="skill-icon">Collaboration</div>
+                            </div>
+                        </div>
+                        <div flex=25 flex-xs=15 flex-sm=20></div>
+                    </div>
+
+                    <div class="info-container NewContainer" layout="row" flex>
+                        <div layout="row" flex=25 flex-xs=15 flex-sm=20>
+                        </div>
+                        <div layout="column" flex>
+                            <div class="info-description">Monroe Valley, Web Developer Intern</div>
+                            <div class="info-name">Monroe, Indiana - June 2017-July 2017</div>
+                            <div class="info-desc-text">
+                                I was fortunate enough to work at Monroe Valley for a short amount of time between my freshman and sophomore year of college. The developers themselves are spread between a lot of projects, but they're most known for the point of sale software.
+                                During this internship, I was assigned to fix bugs that rolled in across apps and I ended up doing a good amount of feature development on a web page that was for a mall kiosk. This was my first internship so I learned a ton not only about the tech of the CS industry, but also about how a company operates in general.
+                            </div>
+                            <div layout="row">
+                                <div class="skill-icon">HTML</div>
+                                <div class="skill-icon">CSS</div>
+                                <div class="skill-icon">JavaScript</div>
+                            </div>
+                            <div layout="row">
+                                <div class="skill-icon">Angular</div>
+                                <div class="skill-icon">Collaboration</div>
+                            </div>
+                        </div>
+                        <div flex=25 flex-xs=15 flex-sm=20></div>
+                    </div>
+
+                    <div class="info-container NewContainer" layout="row" flex>
+                        <div layout="row" flex=25 flex-xs=15 flex-sm=20>
+                        </div>
+                        <div layout="column" flex>
+                            <div class="info-heading">Extra Curricular</div>
+                            <div class="info-description">Purdue Launchpad, Mentor</div>
+                            <div class="info-name">West Lafayette, Indiana - August 2019-Current</div>
+                            <div class="info-desc-text">
+                                (Will be updated when I complete the mentorship)
+                            </div>
+                            <div layout="row">
+                                <div class="skill-icon">1-1 Leadership</div>
+                                <div class="skill-icon">Mentorship</div>
+                            </div>
+                        </div>
+                        <div layout="row" flex=25 flex-xs=15 flex-sm=20>
+                        </div>
+                    </div>
+
+                    <div class="info-container" layout="row" flex>
+                        <div layout="row" flex=25 flex-xs=15 flex-sm=20>
+                        </div>
+                        <div layout="column" flex>
+                            <div class="info-description">Purdue University, Resident Assistant</div>
+                            <div class="info-name">West Lafayette, Indiana - August 2018-May 2019</div>
+                            <div class="info-desc-text">
+                                I had the pleasure of being an RA in Wiley hall my junior year of college. During my time as the fearless leader of SW2, I was tasked with a HUGE variety of things.
+                                My regular jobs included going on rounds to ensure the safety of residents, advising especially but not exclusively first year students on my floor, and organizing fun events that encouraged intellectual curiousity. 
+                            </div>
+                            <div layout="row">
+                                <div class="skill-icon">Group Leadership</div>
+                                <div class="skill-icon">Mentorship</div>
+                                <div class="skill-icon">Event planning</div>
+                            </div>
+                        </div>
+                        <div layout="row" flex=25 flex-xs=15 flex-sm=20>
+                        </div>
+                    </div>
+
+                    <div class="info-container" layout="row" flex>
+                        <div layout="row" flex=25 flex-xs=15 flex-sm=20>
+                        </div>
+                        <div layout="column" flex>
+                            <div class="info-description">Purdue University, Teaching Assistant</div>
+                            <div class="info-name">West Lafayette, Indiana - January 2016-May 2018</div>
+                            <div class="info-desc-text">
+                                Over the course of my freshman an sophomore year at Purdue, I was able to be a TA for 2 classes. Both experiences were quite different.
+                                Some of my responsibilities included brainstorming new content for students to consume, guiding discussion in lab as well as in online discussion boards, and gradiing regular homework and lab submissions.
+                            </div>
+                            <div layout="row">
+                                <div class="skill-icon">Lesson planning</div>
+                                <div class="skill-icon">Guiding discussion</div>
+                                <div class="skill-icon">Grading</div>
+                            </div>
+                        </div>
+                        <div layout="row" flex=25 flex-xs=15 flex-sm=20>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button-container" layout="row" flex>
+                <div flex=20 flex-xs=5></div>
+                <div layout-gt-sm="row" layout="column" flex>
+                    <div layout=row flex>
+                        <div flex></div>
+                        <img class="info-icon" src="assets/linkedin_circle.png" onclick="openInNewTab('https:\/\/www.linkedin.com/in/benjamin-kahlert-0b4709126/')" />
+                        <div flex></div>
+                    </div>
+                    <div layout=row flex>
+                        <div flex></div>
+                        <img class="info-icon" src="assets/resume-icon.png" onclick="openInNewTab('assets/resume.pdf')" />
+                        <div flex></div>
+                    </div>
+                    <div layout=row flex>
+                        <div flex></div>
+                        <img class="info-icon" src="assets/github-icon.png" onclick="openInNewTab('https:\/\/www.github.com/benkahlert')" />
+                        <div flex></div>
+                    </div>
+                </div>
+                <div flex=20 flex-xs=5></div>
             </div>
         </div>
     </div>
@@ -58,4 +266,5 @@
     </script>
     <script type="text/javascript" src="indexController.js"></script>
 </body>
+
 </html>

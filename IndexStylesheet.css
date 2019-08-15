@@ -1,49 +1,115 @@
-.SectionHeader {
-    font-weight:500;
-    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-    font-size:85px;
+body {
+    background-image:url(LowPolyWhite.jpg);
+}
+
+.CMD-icon {
+    height:21px;
+    width:21px;
+    padding:8px;
+}
+
+.terminal-header-text {
+    font-size:12px;
+}
+
+.top-of-terminal {
+    background-color: white;
+    height:37px;
+    font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+}
+
+.terminal {
+    background-color: black;
+    height:450px;
+    font-size:12px;
+    box-shadow: 10px 10px 5px #888888;
+}
+
+.terminal-container {
+    border: 1px solid;
     margin-top:35px;
-    text-align: center;
+    margin-bottom:35px;
 }
-.infoIcon {
-        transition: all .2s ease-in-out;
-        padding:30px;
-        width:160px;
-        height:160px;
+
+.terminal-type-face {
+    color: #ddd;
+    font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+    font-size:14px;
 }
-.infoIcon:hover {
-        transform: scale(1.2);
-        cursor:pointer;
+
+.console {
+    font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
 }
-.ButtonContainer {
-        margin-top:35px;
+
+
+/* Resume Classes */
+.info-icon {
+    transition: all .2s ease-in-out;
+    padding:30px;
+    width:160px;
+    height:160px;
 }
-@media screen and (max-width: 900px) {
-        .SectionHeader {
-            font-size:60px;
-            margin-top:30px;
-        }
-        .ButtonContainer {
-                margin-top:20px;
-        }
-        .infoIcon {
-            height:110px;
-            width:110px;
-            padding:25px;
-        }
+
+.info-icon:hover {
+    transform: scale(1.2);
+    cursor:pointer;
 }
+
+.info-container {
+    margin-top:35px;
+
+}
+
+.info-heading {
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    margin-bottom:10px;
+    font-size:36px;
+    color: #4c4c4c;
+}
+
+.info-description {
+    color: #489ADE;
+    font-weight:bold;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+
+.info-name {
+    font-weight:bold;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.info-desc-text {
+    color: #4c4c4c;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+
+/* Misc & Heading Classes */
+.section-header {
+    font-weight:bold;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-size: 64px;
+    margin-top:35px;
+    color: #4c4c4c;
+}
+
+.skill-icon {
+    border:1px solid #489ADE;
+    border-radius:6px;
+    color:#4C4C4C;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-size:12px;
+    padding: 8px 12px;
+    margin:10px 16px 10px 0px;
+}
+
+.button-container {
+    margin: 12px 0 24px;
+}
+
 @media screen and (max-width: 600px) {
-        .SectionHeader {
-            font-weight:500;
-            font-size:40px;
-            margin-top:25px;
-        }
-        .infoIcon {
-            height:80px;
-            width:80px;
-            padding:15px;
-        }
-        .ButtonContainer {
-            margin-top:10px;
-        }
+    .section-header {
+        font-size: 32px;
+    }
 }
